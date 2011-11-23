@@ -1,0 +1,5 @@
+If you take a look at http://www.ruby-doc.org/core-1.9.3/IO.html you can see
+that mode "w" (write only) truncates existing file to zero length or creates
+a new file for writing.
+
+So you don't need the "target.truncate(target.size)" instruction.

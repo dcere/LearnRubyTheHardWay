@@ -1,0 +1,64 @@
+------------------------------------------------------------ Class: File
+
+FTOOLS.RB: EXTRA TOOLS FOR THE FILE CLASS
+=========================================
+     Author:        WATANABE, Hirofumi
+
+     Documentation: Zachary Landau
+
+     This library can be distributed under the terms of the Ruby
+     license. You can freely distribute/modify this library.
+
+     It is included in the Ruby standard library.
+
+
+Description
+-----------
+     ftools adds several (class, not instance) methods to the File
+     class, for copying, moving, deleting, installing, and comparing
+     files, as well as creating a directory path. See the File class for
+     details.
+
+     FileUtils contains all or nearly all the same functionality and
+     more, and is a recommended option over ftools
+
+     When you
+
+       require 'ftools'
+
+     then the File class aquires some utility methods for copying,
+     moving, and deleting files, and more.
+
+     See the method descriptions below, and consider using FileUtils as
+     it is more comprehensive.
+
+------------------------------------------------------------------------
+
+
+Constants:
+----------
+     Separator:      separator
+     SEPARATOR:      separator
+     ALT_SEPARATOR:  rb_obj_freeze(rb_str_new2("\\"))
+     ALT_SEPARATOR:  Qnil
+     PATH_SEPARATOR: rb_obj_freeze(rb_str_new2(PATH_SEP))
+     BUFSIZE:        8 * 1024
+
+
+Class methods:
+--------------
+     atime, basename, blockdev?, catname, chardev?, chmod, chmod, chown,
+     compare, copy, ctime, delete, directory?, dirname, executable?,
+     executable_real?, exist?, exists?, expand_path, extname, file?,
+     fnmatch, fnmatch?, ftype, grpowned?, identical?, install, join,
+     lchmod, lchown, link, lstat, makedirs, move, mtime, new, owned?,
+     pipe?, readable?, readable_real?, readlink, rename, safe_unlink,
+     setgid?, setuid?, size, size?, socket?, split, stat, sticky?,
+     symlink, symlink?, syscopy, truncate, umask, unlink, utime,
+     writable?, writable_real?, zero?
+
+
+Instance methods:
+-----------------
+     atime, chmod, chown, ctime, flock, lstat, mtime, o_chmod, path,
+     truncate

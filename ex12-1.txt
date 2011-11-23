@@ -1,0 +1,10 @@
+Require:
+- Runs another file.
+- Tracks what you have required in the past so that it won't require the same file twice
+- If you just want to run the file use "load"
+
+Include:
+- Takes all the methods from another module and includes them into the current module
+- Primary way to extend classes
+
+Source: http://stackoverflow.com/questions/318144/what-is-the-difference-between-include-and-require-in-ruby

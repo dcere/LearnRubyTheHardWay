@@ -1,0 +1,8 @@
+Yes, to prove it I'll make two files
+ex12-2a: Puts a sentence on the screen. No library: no methods
+ex12-2b: Requires ex12-2a
+
+If you run
+_$: ruby ex12-2b
+
+you wil get the sentence that ex12-2a prints on your screen
