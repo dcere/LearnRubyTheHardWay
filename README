@@ -1,1 +1,7 @@
 Exercises from http://ruby.learncodethehardway.org/book/
+
+Exercises 3 to 45 are simple ruby text files.
+Exercises 46 to 49 are projects with their own folder.
+
+Extras (if done) are denoted with a hyphen and the extra number after it.
+Example: ex5-4.rb contains exercise number 5 with extra number 4.
