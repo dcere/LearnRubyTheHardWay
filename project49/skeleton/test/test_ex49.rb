@@ -8,7 +8,6 @@ require '../../../project48/skeleton/lib/lexicon-4.rb'
 class Ex49Tests < Test::Unit::TestCase
 
    Pair = Lexicon::Pair
-   @@lexicon = Lexicon.new()
    
    def test_peek()
       assert_equal(peek([ Pair.new(:noun, 'bear'), Pair.new(:verb, 'eat') ]), :noun)
