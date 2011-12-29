@@ -1,24 +1,45 @@
+require '../lib/gothonweb'
 require 'test/unit'
+require 'rack/test'
+require './test_functions'
 
-def assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
+ENV['RACK_ENV'] = 'test'
 
-   assert_equal(resp.status, status, "Expected response #{status} not in #{resp}")
-   
-   if status == 200
-      assert(resp.body, "Response data is empty.")
-   end
-   
-   if contains
-      assert((resp.body.include? contains), "Response does not contain #{contains}")
-   end
-   
-   if matches
-      reg = Regexp.new(matches)
-      assert reg.match(contains), "Response does not match #{matches}"
-   end
-   
-   if headers
-      assert_equal(resp.headers, headers)
+class GothonTest < Test::Unit::TestCase
+  include Rack::Test::Methods
+
+   # gothonweb is the application
+   def app
+      Sinatra::Application
    end
 
+   # Try to get a page that does not exist => Error 404
+   def test_error_404()
+      get '/foo'
+      assert_response(last_response, nil, nil, nil, 404)
+   end
+   
+   # Get hello page
+   def test_get_hello()
+      get '/hello'
+      assert_response(last_response, "Fill out this form", nil, nil, 200)
+   end
+   
+   # Post an empty form
+   def test_post_hello
+      post '/hello'
+      assert_response(last_response, nil, nil, nil, 200)
+   end
+   
+   # Post a form with a name
+   def test_post_hello_name
+      post '/hello?name=david'
+      assert_response(last_response, "david", nil, nil, 200)
+   end
+   
+   # Post a form with a greeting and a name
+   def test_post_greeting_name
+      post '/hello', {:greet => "whats up?", :name => "david"}
+      assert_response(last_response, "whats up?, david", nil, nil, 200)
+   end
 end
