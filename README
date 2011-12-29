@@ -1,7 +1,21 @@
 Exercises from http://ruby.learncodethehardway.org/book/
 
 Exercises 3 to 45 are simple ruby text files.
-Exercises 46 to 49 are projects with their own folder.
+Exercises 46 to 51 are projects with their own folder.
 
 Extras (if done) are denoted with a hyphen and the extra number after it.
 Example: ex5-4.rb contains exercise number 5 with extra number 4.
+
+
+Notes:
+
+I used ruby 1.8.7 to do the tutorial. Some things might be different
+for you if you are using another version.
+
+
+Disclaimer:
+
+Exercise 51 was done before Zed completed/reviewed the article.
+I created the test_gothonweb.rb file by myself so if there is something wrong
+please send an e-mail to him so that he can update the solution.
+I was doing this tutorial to learn, I am not an expert Ruby programmer.

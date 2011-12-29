@@ -1,4 +1,4 @@
-require './ex51/version'
+#require './ex51/version'
 require 'rubygems' # Needed for ruby 1.8.7
 require 'sinatra'
 require 'erb'
